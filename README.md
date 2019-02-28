@@ -16,4 +16,3 @@ Run the app with `node app/server.js`
 
 A terminal interface will be provided in the future to allow users input details of their target location so they
 do not edit the code directly.
-
