@@ -55,7 +55,20 @@ const getInfoForLocation = async (locations) => {
 
 }
 
-getInfoForLocation([{name:'new york', postal_code:'10013'}, {name:'london', postal_code:'WC2N 5DU'}])
+const locations = [
+
+  {
+    name:'new york', 
+    postal_code:'10013'
+  }, 
+  {
+    name:'london', 
+    postal_code:'WC2N 5DU'
+  }
+
+]
+
+getInfoForLocation(locations)
 
 module.exports = {
     getWeatherData,
