@@ -9,7 +9,13 @@ const getWeatherData = async (location) => {
     const requestUrl = `${WORLD_WEATHER_ONLINE_WEATHER_URL}&q=${encodedLocation}`
     const res = await axios.get(requestUrl)
     return res.data.data;
-    
 }
 
-getWeatherData('london')
+const getTime =  async (location) => {
+
+    const encodedLocation = encodeURIComponent(location)
+    const requestUrl = `${WORLD_WEATHER_ONLINE_TIME_URL}&q=${encodedLocation}`
+    const res = await axios.get(requestUrl);
+    return res.data
+
+}
