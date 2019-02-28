@@ -22,7 +22,25 @@ const getTime =  async (location) => {
 
 }
 
+const displayLocationInfo = (weatherData) => {
+
+    weatherData.forEach( data => {
+        console.log(`The weather information for ${data.weather.data.request[0].query} is as follows:`)
+        console.log(`
+            Temperature: ${data.weather.data.current_condition[0].temp_C} degree celcius,
+            It feels like: ${data.weather.data.current_condition[0].FeelsLikeC} degree celcius,
+            Wind speed: ${data.weather.data.current_condition[0].windspeedKmph} km/h,
+            Humidity: ${data.weather.data.current_condition[0].humidity}%,
+            Cloud cover: ${data.weather.data.current_condition[0].cloudcover}%,
+            Current time: ${data.timeInfo.data.time_zone[0].localtime} UTC,
+            Time zone: ${data.timeInfo.data.time_zone[0].zone} 
+            --------------------------------------------------------------------------
+        `)
+    });
+}
+
 const getInfoForLocation = async (locations) => {
+
     let weatherData = [];
     await asyncForEach(locations, async (location) => {
         const weather = await getWeatherData(location.name)
@@ -33,13 +51,13 @@ const getInfoForLocation = async (locations) => {
         }
         weatherData.push(weatherDetails)        
     })
-    console.log(weatherData)
+    displayLocationInfo(weatherData)
+
 }
 
 getInfoForLocation([{name:'new york', postal_code:'10013'}, {name:'london', postal_code:'WC2N 5DU'}])
 
 module.exports = {
-    getInfoForLocation,
     getWeatherData,
     getTime
 }
