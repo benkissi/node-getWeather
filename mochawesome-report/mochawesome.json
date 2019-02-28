@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2019-02-28T20:47:56.304Z",
-    "end": "2019-02-28T20:47:56.568Z",
-    "duration": 264,
-    "testsRegistered": 1,
+    "start": "2019-02-28T21:03:36.725Z",
+    "end": "2019-02-28T21:03:37.624Z",
+    "duration": 899,
+    "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "77ef713a-b864-4a8f-994a-ff89631573d6",
+    "uuid": "bbd09f28-1b46-4e87-bab8-6843ff801092",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "ecbcd01b-bdad-4597-82b5-83abd097f36b",
+        "uuid": "8ab0e8dc-ba8a-4473-ba14-1b939058b3c7",
         "title": "getTime()",
         "fullFile": "C:\\Users\\Ben\\OneDrive\\Documents\\Dev\\node-getWeather\\app\\test\\app.test.js",
         "file": "\\app\\test\\app.test.js",
@@ -39,7 +39,7 @@
             "title": "should get current time info for location",
             "fullTitle": "getTime() should get current time info for location",
             "timedOut": false,
-            "duration": 256,
+            "duration": 266,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -48,19 +48,57 @@
             "code": "const location = \"London\"  \nconst res = await getTime(location)\nexpect(res).to.exist\nexpect(res.data.request[0].query).to.equal(location)",
             "err": {},
             "isRoot": false,
-            "uuid": "4a81d8fa-268c-4887-9699-9c524a113926",
+            "uuid": "27eba1b7-2429-4e45-882d-b840a949c980",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "4a81d8fa-268c-4887-9699-9c524a113926"
+          "27eba1b7-2429-4e45-882d-b840a949c980"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 256,
+        "duration": 266,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 10000
+      },
+      {
+        "uuid": "2f7ab0e3-cb09-4a97-935b-f9a6451c329b",
+        "title": "getWeather()",
+        "fullFile": "C:\\Users\\Ben\\OneDrive\\Documents\\Dev\\node-getWeather\\app\\test\\app.test.js",
+        "file": "\\app\\test\\app.test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should get current weather info for location",
+            "fullTitle": "getWeather() should get current weather info for location",
+            "timedOut": false,
+            "duration": 616,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const location = \"London\"\nconst res = await getWeatherData(location)\nexpect(res).to.exist\nexpect(res.data.current_condition[0].temp_C).to.be.a('string')",
+            "err": {},
+            "isRoot": false,
+            "uuid": "9ca11045-c7d8-4f82-88ba-75efcfb8dcf9",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "9ca11045-c7d8-4f82-88ba-75efcfb8dcf9"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 616,
         "root": false,
         "rootEmpty": false,
         "_timeout": 10000
