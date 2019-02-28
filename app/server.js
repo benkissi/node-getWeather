@@ -20,3 +20,8 @@ const getTime =  async (location) => {
   return res.data
 
 }
+
+module.exports = {
+    getWeatherData,
+    getTime
+}

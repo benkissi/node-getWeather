@@ -1,0 +1,79 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-02-28T20:47:56.304Z",
+    "end": "2019-02-28T20:47:56.568Z",
+    "duration": 264,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "77ef713a-b864-4a8f-994a-ff89631573d6",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "ecbcd01b-bdad-4597-82b5-83abd097f36b",
+        "title": "getTime()",
+        "fullFile": "C:\\Users\\Ben\\OneDrive\\Documents\\Dev\\node-getWeather\\app\\test\\app.test.js",
+        "file": "\\app\\test\\app.test.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "should get current time info for location",
+            "fullTitle": "getTime() should get current time info for location",
+            "timedOut": false,
+            "duration": 256,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const location = \"London\"  \nconst res = await getTime(location)\nexpect(res).to.exist\nexpect(res.data.request[0].query).to.equal(location)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "4a81d8fa-268c-4887-9699-9c524a113926",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "4a81d8fa-268c-4887-9699-9c524a113926"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 256,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 10000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 10000
+  },
+  "copyrightYear": 2019
+}
